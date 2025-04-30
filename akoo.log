@@ -1,0 +1,3067 @@
+2025-04-28 11:24:18,995 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-28 11:24:18,996 - ml_summarizer - INFO - ML Summarizer initialized with model sshleifer/distilbart-cnn-12-6, cache at c:\Users\Dickson\OneDrive\Desktop\Chat bot\model_cache
+2025-04-28 11:24:19,631 - __main__ - INFO - Downloaded NLTK resource: stopwords
+2025-04-28 11:24:19,659 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-28 11:24:19,662 - __main__ - INFO - NLTK initialized successfully
+2025-04-28 11:24:19,665 - __main__ - INFO - Created directory: cache
+2025-04-28 11:24:19,665 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-28 11:24:19,669 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-28 11:24:19,703 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-28 11:24:19,704 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 11:24:19,719 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-28 11:24:22,124 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-28 11:24:22,125 - ml_summarizer - INFO - ML Summarizer initialized with model sshleifer/distilbart-cnn-12-6, cache at c:\Users\Dickson\OneDrive\Desktop\Chat bot\model_cache
+2025-04-28 11:24:22,720 - __main__ - INFO - Downloaded NLTK resource: stopwords
+2025-04-28 11:24:22,743 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-28 11:24:22,745 - __main__ - INFO - NLTK initialized successfully
+2025-04-28 11:24:22,747 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-28 11:24:22,751 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-28 11:24:22,764 - werkzeug - WARNING -  * Debugger is active!
+2025-04-28 11:24:22,768 - werkzeug - INFO -  * Debugger PIN: 321-018-428
+2025-04-28 11:27:08,427 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 11:27:08] "GET / HTTP/1.1" 200 -
+2025-04-28 11:27:10,047 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 11:27:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-28 11:27:29,831 - __main__ - INFO - Received file upload request
+2025-04-28 11:27:33,705 - __main__ - INFO - Processing file: 528267_ANGOLA-2023-HUMAN-RIGHTS-REPORT.pdf
+2025-04-28 11:27:33,708 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-28 11:27:33,709 - __main__ - INFO - Requested summary: 200 sentences, paragraph format, structured type, ML: True
+2025-04-28 11:27:33,710 - __main__ - INFO - Starting asynchronous processing of uploads\528267_ANGOLA-2023-HUMAN-RIGHTS-REPORT.pdf
+2025-04-28 11:27:33,710 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 11:27:33] "POST /upload HTTP/1.1" 200 -
+2025-04-28 11:27:33,791 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-28 11:27:33,801 - pdf_processor - INFO - PDF has 36 pages
+2025-04-28 11:27:34,236 - pdf_processor - INFO - Successfully extracted 54672 characters from PDF
+2025-04-28 11:27:34,236 - __main__ - INFO - Using ML-based summarization
+2025-04-28 11:27:35,922 - ml_summarizer - ERROR - Error initializing ML models: No module named 'torch'
+2025-04-28 11:27:35,922 - ml_summarizer - WARNING - Could not initialize ML model, falling back to rule-based approach
+2025-04-28 11:27:35,922 - __main__ - INFO - Using traditional summarization methods
+2025-04-28 11:27:35,923 - summarization - INFO - Generating structured summary for 528267_ANGOLA-2023-HUMAN-RIGHTS-REPORT.pdf
+2025-04-28 11:27:36,061 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,062 - summarization - INFO - Regex tokenization found 59 sentences
+2025-04-28 11:27:36,065 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,067 - summarization - INFO - Regex tokenization found 250 sentences
+2025-04-28 11:27:36,070 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,070 - summarization - INFO - Regex tokenization found 59 sentences
+2025-04-28 11:27:36,074 - summarization - ERROR - Error calculating term frequency: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,082 - summarization - ERROR - Error calculating TF-IDF scores: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,104 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,106 - summarization - INFO - Regex tokenization found 308 sentences
+2025-04-28 11:27:36,127 - summarization - ERROR - Error calculating term frequency: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,135 - summarization - ERROR - Error calculating TF-IDF scores: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,138 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,140 - summarization - INFO - Regex tokenization found 250 sentences
+2025-04-28 11:27:36,143 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\share\\nltk_data'
+    - 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1008.0_x64__qbz5n2kfra8p0\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-04-28 11:27:36,143 - summarization - INFO - Regex tokenization found 59 sentences
+2025-04-28 11:27:36,147 - __main__ - INFO - Saving summary to cache: cache\a6d69951e87df102f59cc265b937603a_-566628440244461163.json
+2025-04-28 11:27:36,156 - __main__ - INFO - Summary generation completed successfully
+2025-04-28 11:27:36,663 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 11:27:36] "GET /status/22b9611547f6d22d9c8dbfccb7ef68ca HTTP/1.1" 200 -
+2025-04-28 11:32:57,180 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-28 11:32:57,182 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-28 11:32:57,184 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-28 11:32:57,753 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-29 11:21:24,923 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 11:21:26,058 - __main__ - INFO - Downloading NLTK resource: punkt
+2025-04-29 11:21:30,305 - __main__ - INFO - Downloaded NLTK resource: punkt
+2025-04-29 11:21:30,307 - __main__ - INFO - Downloading NLTK resource: stopwords
+2025-04-29 11:21:30,996 - __main__ - INFO - Downloaded NLTK resource: stopwords
+2025-04-29 11:21:31,011 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 11:21:31,033 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 11:21:31,043 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 11:21:31,062 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 11:21:31,090 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 11:21:31,091 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 11:21:31,100 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 11:21:31,103 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 11:21:31,214 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-29 11:21:31,214 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 11:21:31,217 - werkzeug - INFO -  * Restarting with stat
+2025-04-29 11:21:32,016 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 11:21:32,533 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 11:21:33,381 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 11:21:33,383 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 11:21:33,390 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 11:21:33,392 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 11:21:33,393 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 11:21:33,394 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 11:21:33,397 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 11:21:33,425 - werkzeug - WARNING -  * Debugger is active!
+2025-04-29 11:21:33,428 - werkzeug - INFO -  * Debugger PIN: 973-432-148
+2025-04-29 11:24:33,201 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:24:33] "GET / HTTP/1.1" 200 -
+2025-04-29 11:24:36,112 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:24:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 11:24:38,993 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:24:38] "GET /get?msg=Hello%20there! HTTP/1.1" 200 -
+2025-04-29 11:24:42,804 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:24:42] "GET /get?msg=Who%20are%20you? HTTP/1.1" 200 -
+2025-04-29 11:26:53,943 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:26:53] "GET / HTTP/1.1" 200 -
+2025-04-29 11:26:56,014 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:26:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 11:27:22,173 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:27:22] "GET / HTTP/1.1" 200 -
+2025-04-29 11:30:11,992 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:30:11] "GET / HTTP/1.1" 200 -
+2025-04-29 11:30:24,363 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:30:24] "GET /get?msg=Hello%20there! HTTP/1.1" 200 -
+2025-04-29 11:30:29,932 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:30:29] "GET /get?msg=Who%20are%20you? HTTP/1.1" 200 -
+2025-04-29 11:30:50,147 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:30:50] "GET /get?msg=How%20do%20you%20work? HTTP/1.1" 200 -
+2025-04-29 11:32:05,710 - __main__ - INFO - Received file upload request
+2025-04-29 11:32:26,154 - __main__ - INFO - Processing file: HateSpeechDetectionUsingNaturalLanguageProcessing.pdf
+2025-04-29 11:32:26,162 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-29 11:32:26,162 - __main__ - INFO - Requested summary: 30 sentences, paragraph format, academic type, ML: True
+2025-04-29 11:32:26,162 - __main__ - INFO - Starting asynchronous processing of uploads\5f40a620c4ea31d3642648606c4e0842.pdf
+2025-04-29 11:32:26,176 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:32:26] "POST /upload HTTP/1.1" 200 -
+2025-04-29 11:32:26,289 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-29 11:32:26,289 - pdf_processor - INFO - PDF has 8 pages
+2025-04-29 11:32:26,558 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:32:26] "GET /status/117eb9887b4d99e004a7e2df1983bdc3 HTTP/1.1" 200 -
+2025-04-29 11:32:26,677 - pdf_processor - INFO - Successfully extracted 37725 characters from PDF
+2025-04-29 11:32:26,677 - pdf_processor - INFO - Successfully extracted 37725 characters with PyPDF2
+2025-04-29 11:32:26,685 - language_processor - INFO - Downloaded NLTK resource: punkt
+2025-04-29 11:32:26,685 - language_processor - INFO - Downloaded NLTK resource: stopwords
+2025-04-29 11:32:26,685 - language_processor - INFO - Downloading NLTK resource: wordnet
+2025-04-29 11:32:26,685 - language_processor - INFO - NLTK initialized successfully
+2025-04-29 11:32:26,700 - language_processor - WARNING - spaCy not available, using fallback for advanced NLP tasks
+2025-04-29 11:32:26,708 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,716 - __main__ - INFO - Using ML-based summarization
+2025-04-29 11:32:26,716 - ml_summarizer - INFO - ML Summarizer initialized with model sshleifer/distilbart-cnn-12-6, cache at c:\Users\Dickson\OneDrive\Desktop\Chat bot\model_cache
+2025-04-29 11:32:26,716 - ml_summarizer - ERROR - Error initializing ML models: No module named 'transformers'
+2025-04-29 11:32:26,716 - ml_summarizer - WARNING - Could not initialize ML model, falling back to rule-based approach
+2025-04-29 11:32:26,716 - __main__ - INFO - Using traditional summarization methods
+2025-04-29 11:32:26,716 - summarization - INFO - Requested summary: 30 sentences, paragraph format, academic type
+2025-04-29 11:32:26,784 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,784 - summarization - INFO - Regex tokenization found 383 sentences
+2025-04-29 11:32:26,796 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,796 - summarization - INFO - Regex tokenization found 11 sentences
+2025-04-29 11:32:26,802 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,807 - summarization - INFO - Regex tokenization found 87 sentences
+2025-04-29 11:32:26,811 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,811 - summarization - INFO - Regex tokenization found 121 sentences
+2025-04-29 11:32:26,811 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,827 - summarization - INFO - Regex tokenization found 164 sentences
+2025-04-29 11:32:26,827 - summarization - ERROR - Error calculating term frequency: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,842 - summarization - ERROR - Error calculating TF-IDF scores: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,858 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,858 - summarization - INFO - Regex tokenization found 383 sentences
+2025-04-29 11:32:26,876 - summarization - ERROR - Error calculating term frequency: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,891 - summarization - ERROR - Error calculating TF-IDF scores: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,905 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,905 - summarization - INFO - Regex tokenization found 383 sentences
+2025-04-29 11:32:26,916 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,916 - summarization - INFO - Regex tokenization found 383 sentences
+2025-04-29 11:32:26,926 - summarization - INFO - Saving summary to cache: c:\Users\Dickson\OneDrive\Desktop\Chat bot\cache\ae83e7b792205230df0d1b5cf630a5f1_cfa8831eb4fc172cb5ba0a28736d0564.json
+2025-04-29 11:32:26,926 - summarization - INFO - Academic excellence summarization succeeded
+2025-04-29 11:32:26,937 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:32:26,937 - summarization - INFO - Regex tokenization found 10 sentences
+2025-04-29 11:32:28,921 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:32:28] "GET /status/117eb9887b4d99e004a7e2df1983bdc3 HTTP/1.1" 200 -
+2025-04-29 11:33:33,620 - __main__ - INFO - Received file upload request
+2025-04-29 11:33:52,735 - __main__ - INFO - Processing file: HateSpeechDetectionUsingNaturalLanguageProcessing.pdf
+2025-04-29 11:33:52,768 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-29 11:33:52,768 - __main__ - INFO - Requested summary: 30 sentences, paragraph format, basic type, ML: True
+2025-04-29 11:33:52,771 - __main__ - INFO - Starting asynchronous processing of uploads\3e3017e630d9b5eb4194731e1cfac3a0.pdf
+2025-04-29 11:33:52,772 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:33:52] "POST /upload HTTP/1.1" 200 -
+2025-04-29 11:33:52,799 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-29 11:33:52,803 - pdf_processor - INFO - PDF has 8 pages
+2025-04-29 11:33:53,368 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:33:53] "GET /status/61190ad3707c56281b07fc916d63aa47 HTTP/1.1" 200 -
+2025-04-29 11:33:53,504 - pdf_processor - INFO - Successfully extracted 37725 characters from PDF
+2025-04-29 11:33:53,506 - pdf_processor - INFO - Successfully extracted 37725 characters with PyPDF2
+2025-04-29 11:33:53,516 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:33:53,524 - __main__ - INFO - Using traditional summarization methods
+2025-04-29 11:33:53,524 - summarization - INFO - Requested summary: 30 sentences, paragraph format, basic type
+2025-04-29 11:33:53,534 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:33:53,537 - summarization - INFO - Regex tokenization found 383 sentences
+2025-04-29 11:33:53,537 - summarization - INFO - Text split into 383 sentences
+2025-04-29 11:33:53,537 - summarization - INFO - Using fallback summarization method
+2025-04-29 11:33:53,547 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:33:53,549 - summarization - INFO - Regex tokenization found 383 sentences
+2025-04-29 11:33:53,549 - summarization - INFO - Generated fallback summary of 3537 characters
+2025-04-29 11:33:53,560 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:33:53,560 - summarization - INFO - Regex tokenization found 30 sentences
+2025-04-29 11:33:53,560 - summarization - INFO - Generated fallback summary of 3537 characters
+2025-04-29 11:33:53,573 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:33:53,574 - summarization - INFO - Regex tokenization found 30 sentences
+2025-04-29 11:33:55,828 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:33:55] "GET /status/61190ad3707c56281b07fc916d63aa47 HTTP/1.1" 200 -
+2025-04-29 11:34:16,487 - __main__ - INFO - Received file upload request
+2025-04-29 11:34:35,942 - __main__ - INFO - Processing file: HateSpeechDetectionUsingNaturalLanguageProcessing.pdf
+2025-04-29 11:34:35,963 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-29 11:34:35,963 - __main__ - INFO - Requested summary: 1000 sentences, paragraph format, basic type, ML: True
+2025-04-29 11:34:35,963 - __main__ - INFO - Starting asynchronous processing of uploads\d86a726f4645e05bb098525f261a5dee.pdf
+2025-04-29 11:34:35,963 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:34:35] "POST /upload HTTP/1.1" 200 -
+2025-04-29 11:34:35,982 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-29 11:34:35,989 - pdf_processor - INFO - PDF has 8 pages
+2025-04-29 11:34:36,374 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:34:36] "GET /status/64b3680dda36060e9433f3b650c3245e HTTP/1.1" 200 -
+2025-04-29 11:34:36,460 - pdf_processor - INFO - Successfully extracted 37725 characters from PDF
+2025-04-29 11:34:36,460 - pdf_processor - INFO - Successfully extracted 37725 characters with PyPDF2
+2025-04-29 11:34:36,460 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:34:36,470 - __main__ - INFO - Using traditional summarization methods
+2025-04-29 11:34:36,476 - summarization - INFO - Requested summary: 1000 sentences, paragraph format, basic type
+2025-04-29 11:34:36,479 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:34:36,485 - summarization - INFO - Regex tokenization found 383 sentences
+2025-04-29 11:34:36,485 - summarization - INFO - Text split into 383 sentences
+2025-04-29 11:34:36,485 - summarization - INFO - Text has fewer sentences than requested summary length, returning full text
+2025-04-29 11:34:36,485 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 11:34:36,485 - summarization - INFO - Regex tokenization found 383 sentences
+2025-04-29 11:34:38,724 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 11:34:38] "GET /status/64b3680dda36060e9433f3b650c3245e HTTP/1.1" 200 -
+2025-04-29 12:03:34,385 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 12:03:35,635 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 12:03:36,709 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 12:03:36,719 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 12:03:36,726 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 12:03:36,749 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 12:03:36,749 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 12:03:36,762 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 12:03:36,767 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 12:03:36,915 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-29 12:03:36,915 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 12:03:36,915 - werkzeug - INFO -  * Restarting with stat
+2025-04-29 12:03:37,575 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 12:03:37,988 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 12:03:38,826 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 12:03:38,829 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 12:03:38,830 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 12:03:38,837 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 12:03:38,838 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 12:03:38,839 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 12:03:38,843 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 12:03:38,868 - werkzeug - WARNING -  * Debugger is active!
+2025-04-29 12:03:38,876 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-29 12:04:00,134 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:04:00] "GET / HTTP/1.1" 200 -
+2025-04-29 12:04:00,300 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:04:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 12:04:42,486 - __main__ - INFO - Received file upload request
+2025-04-29 12:04:42,667 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-29 12:04:42,667 - __main__ - INFO - Requested summary: 1000 sentences, paragraph format, basic type, ML: True
+2025-04-29 12:04:42,667 - __main__ - INFO - Starting asynchronous processing of uploads\52a9cef9d0d73ab7610b388e220314bc.pdf
+2025-04-29 12:04:42,667 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:04:42] "POST /upload HTTP/1.1" 200 -
+2025-04-29 12:04:42,684 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:04:42] "GET /status/6a4eb197c272fd93456e606182abe9df HTTP/1.1" 200 -
+2025-04-29 12:04:42,816 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-29 12:04:42,967 - pdf_processor - INFO - PDF has 324 pages
+2025-04-29 12:04:44,752 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:04:44] "GET /status/6a4eb197c272fd93456e606182abe9df HTTP/1.1" 200 -
+2025-04-29 12:04:46,819 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:04:46] "GET /status/6a4eb197c272fd93456e606182abe9df HTTP/1.1" 200 -
+2025-04-29 12:04:48,853 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:04:48] "GET /status/6a4eb197c272fd93456e606182abe9df HTTP/1.1" 200 -
+2025-04-29 12:04:49,519 - pdf_processor - INFO - Successfully extracted 553610 characters from PDF
+2025-04-29 12:04:49,519 - pdf_processor - INFO - Successfully extracted 553610 characters with PyPDF2
+2025-04-29 12:04:49,523 - language_processor - INFO - Downloaded NLTK resource: punkt
+2025-04-29 12:04:49,535 - language_processor - INFO - Downloaded NLTK resource: stopwords
+2025-04-29 12:04:49,537 - language_processor - INFO - Downloading NLTK resource: wordnet
+2025-04-29 12:04:49,537 - language_processor - INFO - NLTK initialized successfully
+2025-04-29 12:04:49,537 - language_processor - WARNING - spaCy not available, using fallback for advanced NLP tasks
+2025-04-29 12:04:49,554 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 12:04:49,653 - __main__ - INFO - Using traditional summarization methods
+2025-04-29 12:04:49,653 - summarization - INFO - Requested summary: 1000 sentences, paragraph format, basic type
+2025-04-29 12:04:49,670 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 12:04:49,684 - summarization - INFO - Regex tokenization found 2458 sentences
+2025-04-29 12:04:49,684 - summarization - INFO - Text split into 2458 sentences
+2025-04-29 12:04:49,685 - summarization - INFO - Using fallback summarization method
+2025-04-29 12:04:49,687 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 12:04:49,706 - summarization - INFO - Regex tokenization found 2458 sentences
+2025-04-29 12:04:49,720 - summarization - INFO - Generated fallback summary with 1000 sentences
+2025-04-29 12:04:49,720 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 12:04:49,737 - summarization - INFO - Regex tokenization found 1000 sentences
+2025-04-29 12:04:49,737 - summarization - INFO - Generated fallback summary of 239921 characters
+2025-04-29 12:04:49,737 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-29 12:04:49,757 - summarization - INFO - Regex tokenization found 1000 sentences
+2025-04-29 12:04:50,871 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:04:50] "GET /status/6a4eb197c272fd93456e606182abe9df HTTP/1.1" 200 -
+2025-04-29 12:31:13,319 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:31:13] "GET /get?msg=How%20do%20you%20work? HTTP/1.1" 200 -
+2025-04-29 13:06:54,593 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 13:06:55,535 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 13:06:56,568 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 13:06:56,569 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 13:06:56,597 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 13:06:56,674 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 13:06:56,683 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 13:06:56,683 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 13:06:56,700 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 13:06:56,814 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-29 13:06:56,814 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 13:06:56,828 - werkzeug - INFO -  * Restarting with stat
+2025-04-29 13:06:58,192 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 13:06:59,371 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 13:07:00,354 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 13:07:00,359 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 13:07:00,375 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 13:07:00,382 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 13:07:00,386 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 13:07:00,387 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 13:07:00,393 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 13:07:00,456 - werkzeug - WARNING -  * Debugger is active!
+2025-04-29 13:07:00,461 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-29 13:07:19,246 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 13:07:19] "GET / HTTP/1.1" 200 -
+2025-04-29 13:07:24,716 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 13:07:24] "GET /get?msg=Who%20are%20you? HTTP/1.1" 200 -
+2025-04-29 14:20:25,347 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 14:20:25,788 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 14:20:26,627 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 14:20:26,629 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 14:20:26,635 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 14:20:26,662 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 14:20:26,664 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 14:20:26,665 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 14:20:26,668 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 14:20:26,707 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-29 14:20:26,707 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 14:20:26,707 - werkzeug - INFO -  * Restarting with stat
+2025-04-29 14:20:27,336 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 14:20:27,717 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 14:20:28,521 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 14:20:28,523 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 14:20:28,530 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 14:20:28,532 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 14:20:28,533 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 14:20:28,533 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 14:20:28,537 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 14:20:28,566 - werkzeug - WARNING -  * Debugger is active!
+2025-04-29 14:20:28,569 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-29 14:20:43,519 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 14:20:43] "GET / HTTP/1.1" 200 -
+2025-04-29 14:22:56,303 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 14:22:56] "GET / HTTP/1.1" 200 -
+2025-04-29 14:23:07,094 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 14:23:07] "GET / HTTP/1.1" 200 -
+2025-04-29 14:23:08,133 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 14:23:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 14:49:33,818 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 14:49:33] "GET / HTTP/1.1" 200 -
+2025-04-29 14:49:46,648 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 14:49:46] "GET /get?msg=Hello%20there! HTTP/1.1" 200 -
+2025-04-29 14:49:49,160 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 14:49:49] "GET /get?msg=Who%20are%20you? HTTP/1.1" 200 -
+2025-04-29 14:49:51,893 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 14:49:51] "GET /get?msg=How%20do%20you%20work? HTTP/1.1" 200 -
+2025-04-29 15:00:47,237 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-29 15:00:47,357 - werkzeug - INFO -  * Restarting with stat
+2025-04-29 15:12:38,602 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 15:12:39,078 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:12:40,095 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 15:12:40,099 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 15:12:40,104 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:12:40,128 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 15:12:40,128 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 15:12:40,128 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 15:12:40,133 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 15:12:40,165 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-29 15:12:40,165 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 15:12:40,165 - werkzeug - INFO -  * Restarting with stat
+2025-04-29 15:12:40,776 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 15:12:41,140 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:12:41,974 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 15:12:41,974 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 15:12:41,990 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:12:41,995 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 15:12:41,995 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 15:12:41,995 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 15:12:41,995 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 15:12:42,027 - werkzeug - WARNING -  * Debugger is active!
+2025-04-29 15:12:42,029 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-29 15:13:09,412 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 15:13:09] "GET / HTTP/1.1" 200 -
+2025-04-29 15:24:54,005 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-29 15:24:54,105 - werkzeug - INFO -  * Restarting with stat
+2025-04-29 15:24:54,918 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 15:24:55,388 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:24:56,298 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 15:24:56,299 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 15:24:56,307 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:24:56,311 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 15:24:56,312 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 15:24:56,313 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 15:24:56,317 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 15:24:56,345 - werkzeug - WARNING -  * Debugger is active!
+2025-04-29 15:24:56,349 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-29 15:25:10,353 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 15:25:10,724 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:25:11,603 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 15:25:11,607 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 15:25:11,608 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:25:11,630 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 15:25:11,630 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 15:25:11,638 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 15:25:11,641 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 15:25:11,678 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-29 15:25:11,685 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 15:25:11,692 - werkzeug - INFO -  * Restarting with stat
+2025-04-29 15:25:12,291 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-29 15:25:12,678 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:25:13,479 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-29 15:25:13,481 - __main__ - INFO - NLTK initialized successfully
+2025-04-29 15:25:13,485 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-29 15:25:13,491 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-29 15:25:13,492 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-29 15:25:13,493 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-29 15:25:13,497 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-29 15:25:13,526 - werkzeug - WARNING -  * Debugger is active!
+2025-04-29 15:25:13,530 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-29 15:25:26,025 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 15:25:26] "GET / HTTP/1.1" 200 -
+2025-04-29 15:26:35,666 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 09:43:53,300 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 09:43:53,302 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 09:43:54,710 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:43:56,690 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 09:43:56,702 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 09:43:56,708 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:43:56,731 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 09:43:56,732 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 09:43:56,742 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 09:43:56,746 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 09:43:58,454 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-30 09:43:58,454 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 09:43:58,457 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 09:43:59,110 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 09:43:59,111 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 09:43:59,508 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:44:00,826 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 09:44:00,828 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 09:44:00,833 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:44:00,835 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 09:44:00,837 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 09:44:00,838 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 09:44:00,842 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 09:44:00,867 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 09:44:00,873 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 09:46:15,975 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\google_search.py', reloading
+2025-04-30 09:46:16,056 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 09:46:16,861 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 09:46:16,863 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 09:46:17,357 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:46:18,871 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 09:46:18,873 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 09:46:18,879 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:46:18,882 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 09:46:18,883 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 09:46:18,884 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 09:46:18,887 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 09:46:18,914 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 09:46:18,918 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 09:46:23,822 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 09:46:23,822 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 09:46:24,237 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:46:25,826 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 09:46:25,828 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 09:46:25,834 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:46:25,859 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 09:46:25,861 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 09:46:25,862 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 09:46:25,869 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 09:46:27,335 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-30 09:46:27,335 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 09:46:27,337 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 09:46:28,013 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 09:46:28,015 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 09:46:28,421 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:46:29,584 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 09:46:29,586 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 09:46:29,592 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 09:46:29,595 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 09:46:29,595 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 09:46:29,596 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 09:46:29,601 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 09:46:29,630 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 09:46:29,633 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 09:46:51,459 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 09:46:51] "GET / HTTP/1.1" 200 -
+2025-04-30 09:46:59,642 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 09:46:59] "GET /get?msg=Hello%20there! HTTP/1.1" 200 -
+2025-04-30 09:47:04,045 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 09:47:04] "GET /get?msg=Who%20are%20you? HTTP/1.1" 200 -
+2025-04-30 09:47:10,732 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 09:47:10] "GET /get?msg=How%20do%20you%20work? HTTP/1.1" 200 -
+2025-04-30 09:47:34,855 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 09:47:34] "GET /get?msg=what%20is%20the%20capital%20of%20Ghana HTTP/1.1" 200 -
+2025-04-30 10:03:58,952 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\google_search.py', reloading
+2025-04-30 10:03:59,026 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 10:03:59,705 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 10:03:59,705 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 10:04:00,085 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 10:04:02,283 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 10:04:02,285 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 10:04:02,289 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 10:04:02,294 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 10:04:02,296 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 10:04:02,298 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 10:04:02,304 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 10:04:02,335 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 10:04:02,335 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 10:15:50,339 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 10:15:50,414 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 10:24:17,982 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 10:24:17,985 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 10:24:19,017 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 10:24:20,672 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 10:24:20,676 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 10:24:20,682 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 10:24:20,706 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 10:24:20,707 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 10:24:20,708 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 10:24:20,713 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 10:24:22,271 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.15.78.99:5000
+2025-04-30 10:24:22,272 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 10:24:22,275 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 10:24:22,897 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 10:24:22,898 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 10:24:23,292 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 10:24:24,648 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 10:24:24,650 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 10:24:24,656 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 10:24:24,658 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 10:24:24,659 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 10:24:24,660 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 10:24:24,664 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 10:24:24,691 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 10:24:24,704 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 10:27:09,624 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:27:09] "GET / HTTP/1.1" 200 -
+2025-04-30 10:27:16,058 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:27:16] "GET /get?msg=Hello%20there! HTTP/1.1" 200 -
+2025-04-30 10:27:18,832 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:27:18] "GET /get?msg=Who%20are%20you? HTTP/1.1" 200 -
+2025-04-30 10:27:31,565 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:27:31] "GET /get?msg=How%20do%20you%20work? HTTP/1.1" 200 -
+2025-04-30 10:27:53,154 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:27:53] "GET /get?msg=what%20is%20the%20capital%20of%20Ghana HTTP/1.1" 200 -
+2025-04-30 10:28:19,384 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:28:19] "GET /get?msg=can%20you%20help%20with%20web%20sereach%20 HTTP/1.1" 200 -
+2025-04-30 10:29:44,827 - __main__ - INFO - Received file upload request
+2025-04-30 10:29:44,875 - __main__ - INFO - Processing file: [Robert_S._Witte,_John_S._Witte]_Statistics(z-lib.org).pdf
+2025-04-30 10:29:44,900 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-30 10:29:44,901 - __main__ - INFO - Requested summary: 705 sentences, paragraph format, academic type, ML: True
+2025-04-30 10:29:44,902 - __main__ - INFO - Starting asynchronous processing of uploads\7618d825ac4b109a3672566290a812b3.pdf
+2025-04-30 10:29:44,903 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:44] "POST /upload HTTP/1.1" 200 -
+2025-04-30 10:29:44,910 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:44] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:29:45,032 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-30 10:29:45,128 - pdf_processor - INFO - PDF has 501 pages
+2025-04-30 10:29:45,131 - pdf_processor - WARNING - No text extracted from page 1
+2025-04-30 10:29:46,986 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:46] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:29:49,025 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:49] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:29:51,187 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:51] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:29:53,290 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:53] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:29:55,383 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:55] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:29:57,458 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:57] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:29:59,541 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:29:59] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:01,654 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:01] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:03,774 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:03] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:05,827 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:05] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:07,995 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:07] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:09,883 - pdf_processor - INFO - Successfully extracted 1143668 characters from PDF
+2025-04-30 10:30:09,883 - pdf_processor - INFO - Successfully extracted 1143668 characters with PyPDF2
+2025-04-30 10:30:09,894 - language_processor - INFO - Downloaded NLTK resource: punkt
+2025-04-30 10:30:09,894 - language_processor - INFO - Downloaded NLTK resource: stopwords
+2025-04-30 10:30:09,902 - language_processor - INFO - Downloading NLTK resource: wordnet
+2025-04-30 10:30:09,903 - language_processor - INFO - NLTK initialized successfully
+2025-04-30 10:30:09,904 - language_processor - WARNING - spaCy not available, using fallback for advanced NLP tasks
+2025-04-30 10:30:09,912 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:10,103 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:10] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:10,127 - __main__ - INFO - Using ML-based summarization
+2025-04-30 10:30:10,128 - ml_summarizer - INFO - ML Summarizer initialized with model sshleifer/distilbart-cnn-12-6, cache at c:\Users\Dickson\OneDrive\Desktop\Chat bot\model_cache
+2025-04-30 10:30:10,131 - ml_summarizer - ERROR - Error initializing ML models: No module named 'transformers'
+2025-04-30 10:30:10,131 - ml_summarizer - WARNING - Could not initialize ML model, falling back to rule-based approach
+2025-04-30 10:30:10,131 - __main__ - INFO - Using traditional summarization methods
+2025-04-30 10:30:10,132 - summarization - INFO - Requested summary: 705 sentences, paragraph format, academic type
+2025-04-30 10:30:10,137 - ml_summarizer - INFO - ML Summarizer initialized with model sshleifer/distilbart-cnn-12-6, cache at c:\Users\Dickson\OneDrive\Desktop\Chat bot\model_cache
+2025-04-30 10:30:10,138 - ml_summarizer - ERROR - Error initializing ML models: No module named 'transformers'
+2025-04-30 10:30:10,139 - ml_summarizer - WARNING - Could not initialize ML model, falling back to rule-based approach
+2025-04-30 10:30:12,245 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:12] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:13,559 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,593 - summarization - INFO - Regex tokenization found 5219 sentences
+2025-04-30 10:30:13,600 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,600 - summarization - INFO - Regex tokenization found 42 sentences
+2025-04-30 10:30:13,607 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,607 - summarization - INFO - Regex tokenization found 15 sentences
+2025-04-30 10:30:13,614 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,615 - summarization - INFO - Regex tokenization found 14 sentences
+2025-04-30 10:30:13,622 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,624 - summarization - INFO - Regex tokenization found 33 sentences
+2025-04-30 10:30:13,626 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,626 - summarization - INFO - Regex tokenization found 8 sentences
+2025-04-30 10:30:13,638 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,639 - summarization - INFO - Regex tokenization found 24 sentences
+2025-04-30 10:30:13,645 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,676 - summarization - INFO - Regex tokenization found 5219 sentences
+2025-04-30 10:30:13,690 - summarization - ERROR - Error calculating term frequency: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:13,803 - summarization - ERROR - Error calculating TF-IDF scores: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:14,274 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:14,298 - summarization - INFO - Regex tokenization found 5219 sentences
+2025-04-30 10:30:14,463 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:14] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:16,709 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:16] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:16,773 - summarization - ERROR - Error calculating term frequency: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:16,941 - summarization - ERROR - Error calculating TF-IDF scores: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:17,023 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:17,024 - summarization - INFO - Regex tokenization found 33 sentences
+2025-04-30 10:30:17,063 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:17,064 - summarization - INFO - Regex tokenization found 24 sentences
+2025-04-30 10:30:17,074 - summarization - INFO - Saving summary to cache: c:\Users\Dickson\OneDrive\Desktop\Chat bot\cache\4e8227249efb89b46b6b7eb63d10a80c_bec6a23103be35ecc444a83565ede510.json
+2025-04-30 10:30:17,075 - summarization - INFO - Academic excellence summarization succeeded
+2025-04-30 10:30:17,084 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:17,093 - summarization - INFO - Regex tokenization found 240 sentences
+2025-04-30 10:30:18,760 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:18] "GET /status/23961fee81e122b1db903c1e858763c7 HTTP/1.1" 200 -
+2025-04-30 10:30:33,839 - __main__ - INFO - Received file upload request
+2025-04-30 10:30:33,894 - __main__ - INFO - Processing file: [Robert_S._Witte,_John_S._Witte]_Statistics(z-lib.org).pdf
+2025-04-30 10:30:33,925 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-30 10:30:33,925 - __main__ - INFO - Requested summary: 705 sentences, paragraph format, basic type, ML: True
+2025-04-30 10:30:33,925 - __main__ - INFO - Starting asynchronous processing of uploads\2b52684997a8b696c97b337454fa87af.pdf
+2025-04-30 10:30:33,927 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:33] "POST /upload HTTP/1.1" 200 -
+2025-04-30 10:30:33,936 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:33] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:33,949 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-30 10:30:34,157 - pdf_processor - INFO - PDF has 501 pages
+2025-04-30 10:30:34,159 - pdf_processor - WARNING - No text extracted from page 1
+2025-04-30 10:30:35,997 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:35] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:38,092 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:38] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:40,174 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:40] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:42,246 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:42] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:44,354 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:44] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:46,390 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:46] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:48,495 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:48] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:50,618 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:50] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:52,698 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:52] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:54,753 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:54] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:56,768 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:56] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:58,700 - pdf_processor - INFO - Successfully extracted 1143668 characters from PDF
+2025-04-30 10:30:58,700 - pdf_processor - INFO - Successfully extracted 1143668 characters with PyPDF2
+2025-04-30 10:30:58,709 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:58,873 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:30:58] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 10:30:58,927 - __main__ - INFO - Using traditional summarization methods
+2025-04-30 10:30:58,928 - summarization - INFO - Requested summary: 705 sentences, paragraph format, basic type
+2025-04-30 10:30:58,942 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:58,967 - summarization - INFO - Regex tokenization found 5219 sentences
+2025-04-30 10:30:58,967 - summarization - INFO - Text split into 5219 sentences
+2025-04-30 10:30:58,968 - summarization - INFO - Using fallback summarization method
+2025-04-30 10:30:58,977 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:59,001 - summarization - INFO - Regex tokenization found 5219 sentences
+2025-04-30 10:30:59,030 - summarization - INFO - Generated fallback summary with 705 sentences
+2025-04-30 10:30:59,040 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:59,044 - summarization - INFO - Regex tokenization found 705 sentences
+2025-04-30 10:30:59,045 - summarization - INFO - Generated fallback summary of 151266 characters
+2025-04-30 10:30:59,051 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 10:30:59,056 - summarization - INFO - Regex tokenization found 705 sentences
+2025-04-30 10:31:00,937 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 10:31:00] "GET /status/2c2660f48caab0da23062131dd32beca HTTP/1.1" 200 -
+2025-04-30 11:03:33,183 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:03:33] "GET /get?msg=Hello%20there! HTTP/1.1" 200 -
+2025-04-30 11:03:47,463 - __main__ - INFO - Received file upload request
+2025-04-30 11:03:47,544 - __main__ - INFO - Processing file: [Robert_S._Witte,_John_S._Witte]_Statistics(z-lib.org).pdf
+2025-04-30 11:03:47,591 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-30 11:03:47,591 - __main__ - INFO - Requested summary: 705 sentences, paragraph format, structured type, ML: True
+2025-04-30 11:03:47,597 - __main__ - INFO - Starting asynchronous processing of uploads\e5a40cd765c787c7d2cc2961ead766c0.pdf
+2025-04-30 11:03:47,601 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:03:47] "POST /upload HTTP/1.1" 200 -
+2025-04-30 11:03:47,612 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:03:47] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:03:47,656 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-30 11:03:47,810 - pdf_processor - INFO - PDF has 501 pages
+2025-04-30 11:03:47,814 - pdf_processor - WARNING - No text extracted from page 1
+2025-04-30 11:03:49,683 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:03:49] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:03:51,788 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:03:51] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:03:53,904 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:03:53] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:03:55,982 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:03:55] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:03:58,117 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:03:58] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:04:00,205 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:04:00] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:04:02,279 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:04:02] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:04:04,375 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:04:04] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:04:06,474 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:04:06] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:04:08,593 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:04:08] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:04:10,773 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:04:10] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:04:11,097 - pdf_processor - INFO - Successfully extracted 1143668 characters from PDF
+2025-04-30 11:04:11,098 - pdf_processor - INFO - Successfully extracted 1143668 characters with PyPDF2
+2025-04-30 11:04:11,111 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:11,340 - __main__ - INFO - Using ML-based summarization
+2025-04-30 11:04:11,340 - ml_summarizer - INFO - ML Summarizer initialized with model sshleifer/distilbart-cnn-12-6, cache at c:\Users\Dickson\OneDrive\Desktop\Chat bot\model_cache
+2025-04-30 11:04:11,343 - ml_summarizer - ERROR - Error initializing ML models: No module named 'transformers'
+2025-04-30 11:04:11,343 - ml_summarizer - WARNING - Could not initialize ML model, falling back to rule-based approach
+2025-04-30 11:04:11,343 - __main__ - INFO - Using traditional summarization methods
+2025-04-30 11:04:11,343 - summarization - INFO - Requested summary: 705 sentences, paragraph format, structured type
+2025-04-30 11:04:11,349 - ml_summarizer - INFO - ML Summarizer initialized with model sshleifer/distilbart-cnn-12-6, cache at c:\Users\Dickson\OneDrive\Desktop\Chat bot\model_cache
+2025-04-30 11:04:11,350 - ml_summarizer - ERROR - Error initializing ML models: No module named 'transformers'
+2025-04-30 11:04:11,350 - ml_summarizer - WARNING - Could not initialize ML model, falling back to rule-based approach
+2025-04-30 11:04:11,357 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:11,383 - summarization - INFO - Regex tokenization found 5219 sentences
+2025-04-30 11:04:12,893 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:04:12] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:04:14,847 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:14,849 - summarization - INFO - Regex tokenization found 42 sentences
+2025-04-30 11:04:14,857 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:14,858 - summarization - INFO - Regex tokenization found 8 sentences
+2025-04-30 11:04:14,864 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:14,865 - summarization - INFO - Regex tokenization found 33 sentences
+2025-04-30 11:04:14,874 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:14,876 - summarization - INFO - Regex tokenization found 15 sentences
+2025-04-30 11:04:14,885 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:14,885 - summarization - INFO - Regex tokenization found 14 sentences
+2025-04-30 11:04:14,892 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:14,893 - summarization - INFO - Regex tokenization found 24 sentences
+2025-04-30 11:04:14,893 - summarization - INFO - Structured outline summarization succeeded
+2025-04-30 11:04:14,901 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 11:04:14,902 - summarization - INFO - Regex tokenization found 16 sentences
+2025-04-30 11:04:15,013 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:04:15] "GET /status/f984d196270d530c467dfff9e12aaa0a HTTP/1.1" 200 -
+2025-04-30 11:54:32,921 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 11:54:32] "GET / HTTP/1.1" 200 -
+2025-04-30 12:13:30,490 - __main__ - INFO - Received file upload request
+2025-04-30 12:13:30,497 - __main__ - INFO - Processing file: MAY-DAY-STATEMENT.2024.pdf
+2025-04-30 12:13:30,500 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-30 12:13:30,500 - __main__ - INFO - Requested summary: 1000 sentences, paragraph format, basic type, ML: True
+2025-04-30 12:13:30,502 - __main__ - INFO - Starting asynchronous processing of uploads\90f76ea828b9bb9031d53c4533aa60ff.pdf
+2025-04-30 12:13:30,503 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 12:13:30] "POST /upload HTTP/1.1" 200 -
+2025-04-30 12:13:30,529 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 12:13:30] "GET /status/fb3ab5ef5680f96cf0da3e89a83721cc HTTP/1.1" 200 -
+2025-04-30 12:13:30,556 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-30 12:13:30,586 - pdf_processor - INFO - PDF has 9 pages
+2025-04-30 12:13:31,312 - pdf_processor - INFO - Successfully extracted 12808 characters from PDF
+2025-04-30 12:13:31,312 - pdf_processor - INFO - Successfully extracted 12808 characters with PyPDF2
+2025-04-30 12:13:31,332 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 12:13:31,339 - __main__ - INFO - Using traditional summarization methods
+2025-04-30 12:13:31,340 - summarization - INFO - Requested summary: 1000 sentences, paragraph format, basic type
+2025-04-30 12:13:31,352 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 12:13:31,354 - summarization - INFO - Regex tokenization found 119 sentences
+2025-04-30 12:13:31,354 - summarization - INFO - Text split into 119 sentences
+2025-04-30 12:13:31,355 - summarization - INFO - Text has fewer sentences than requested summary length, returning full text
+2025-04-30 12:13:31,367 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 12:13:31,368 - summarization - INFO - Regex tokenization found 119 sentences
+2025-04-30 12:13:32,547 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 12:13:32] "GET /status/fb3ab5ef5680f96cf0da3e89a83721cc HTTP/1.1" 200 -
+2025-04-30 12:14:52,424 - __main__ - INFO - Received file upload request
+2025-04-30 12:14:52,434 - __main__ - INFO - Processing file: MAY-DAY-STATEMENT.2024.pdf
+2025-04-30 12:14:52,442 - __main__ - INFO - Processing progress: {'status': 'processing', 'progress': 10, 'message': 'Starting document extraction...'}
+2025-04-30 12:14:52,443 - __main__ - INFO - Requested summary: 400 sentences, paragraph format, basic type, ML: True
+2025-04-30 12:14:52,447 - __main__ - INFO - Starting asynchronous processing of uploads\b3661fe56699e1cc33e908e8b505fa28.pdf
+2025-04-30 12:14:52,449 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 12:14:52] "POST /upload HTTP/1.1" 200 -
+2025-04-30 12:14:52,472 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 12:14:52] "GET /status/e8de65a65ab47ad861136e0f88c1c2c5 HTTP/1.1" 200 -
+2025-04-30 12:14:52,507 - pdf_processor - INFO - Beginning PDF extraction with PyPDF2
+2025-04-30 12:14:52,531 - pdf_processor - INFO - PDF has 9 pages
+2025-04-30 12:14:53,489 - pdf_processor - INFO - Successfully extracted 12808 characters from PDF
+2025-04-30 12:14:53,490 - pdf_processor - INFO - Successfully extracted 12808 characters with PyPDF2
+2025-04-30 12:14:53,510 - language_processor - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 12:14:53,519 - __main__ - INFO - Using traditional summarization methods
+2025-04-30 12:14:53,521 - summarization - INFO - Requested summary: 400 sentences, paragraph format, basic type
+2025-04-30 12:14:53,547 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 12:14:53,551 - summarization - INFO - Regex tokenization found 119 sentences
+2025-04-30 12:14:53,552 - summarization - INFO - Text split into 119 sentences
+2025-04-30 12:14:53,553 - summarization - INFO - Text has fewer sentences than requested summary length, returning full text
+2025-04-30 12:14:53,575 - summarization - WARNING - NLTK sentence tokenization failed: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'C:\\Users\\Dickson/nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\share\\nltk_data'
+    - 'C:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\.conda\\lib\\nltk_data'
+    - 'C:\\Users\\Dickson\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+    - 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\nltk_data'
+**********************************************************************
+
+2025-04-30 12:14:53,578 - summarization - INFO - Regex tokenization found 119 sentences
+2025-04-30 12:14:54,505 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 12:14:54] "GET /status/e8de65a65ab47ad861136e0f88c1c2c5 HTTP/1.1" 200 -
+2025-04-30 13:28:33,824 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 13:28:34,062 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 13:28:35,780 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 13:28:35,780 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 13:28:36,653 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:28:45,093 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 13:28:45,098 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 13:28:45,114 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:28:45,118 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 13:28:45,119 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 13:28:45,133 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 13:28:45,137 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 13:28:45,205 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 13:28:45,211 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 13:30:20,115 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 13:30:20,201 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 13:30:20,883 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 13:30:20,884 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 13:30:21,317 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:30:27,640 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 13:30:27,644 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 13:30:27,650 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:30:27,652 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 13:30:27,654 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 13:30:27,655 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 13:30:27,658 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 13:30:27,686 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 13:30:27,689 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 13:31:56,668 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 13:31:56,747 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 13:32:27,747 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 13:32:27,751 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 13:32:28,148 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:32:28,951 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 13:32:28,954 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 13:32:28,959 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:32:28,983 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 13:32:28,984 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 13:32:28,985 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 13:32:28,989 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 13:32:41,575 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 13:32:41,575 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 13:32:41,978 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:32:42,830 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 13:32:42,836 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 13:32:42,840 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:32:42,855 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 13:32:42,855 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 13:32:42,867 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 13:32:42,871 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 13:32:44,422 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.15.78.99:8080
+2025-04-30 13:32:44,422 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 13:32:44,425 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 13:32:45,054 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 13:32:45,054 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 13:32:45,439 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:32:46,276 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 13:32:46,278 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 13:32:46,278 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:32:46,287 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 13:32:46,288 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 13:32:46,288 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 13:32:46,291 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 13:32:46,306 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 13:32:46,324 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 13:40:39,193 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 13:40:39,265 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 13:41:16,285 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 13:41:16,285 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 13:41:16,676 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:41:17,483 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 13:41:17,486 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 13:41:17,491 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:41:17,517 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 13:41:17,520 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 13:41:17,520 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 13:41:17,526 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 13:41:18,815 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.15.78.99:8080
+2025-04-30 13:41:18,815 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 13:41:18,815 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 13:41:19,449 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 13:41:19,449 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 13:41:19,839 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:41:20,637 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 13:41:20,644 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 13:41:20,650 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:41:20,654 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 13:41:20,654 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 13:41:20,656 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 13:41:20,660 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 13:41:20,689 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 13:41:20,690 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 13:44:11,293 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 13:44:11,375 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 13:44:12,048 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 13:44:12,048 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 13:44:12,481 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:44:13,318 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 13:44:13,321 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 13:44:13,325 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 13:44:13,330 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 13:44:13,331 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 13:44:13,332 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 13:44:13,337 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 13:44:13,365 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 13:44:13,369 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 14:13:36,882 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 14:13:36,966 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 14:13:37,652 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 14:13:37,654 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 14:13:38,049 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:13:38,869 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 14:13:38,871 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 14:13:38,877 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:13:38,879 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 14:13:38,880 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 14:13:38,881 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 14:13:38,885 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 14:13:38,916 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 14:13:38,921 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 14:13:39,780 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 14:13:39,782 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 14:13:40,289 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:13:41,146 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 14:13:41,148 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 14:13:41,155 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:13:41,181 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 14:13:41,183 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 14:13:41,183 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 14:13:41,188 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 14:14:48,591 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 14:14:48,593 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 14:14:48,997 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:14:49,894 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 14:14:49,897 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 14:14:49,903 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:14:49,927 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 14:14:49,928 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 14:14:49,930 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 14:14:49,934 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 14:14:51,229 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.15.78.99:80
+2025-04-30 14:14:51,229 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 14:14:51,233 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 14:14:51,876 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 14:14:51,878 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 14:14:52,276 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:14:53,080 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 14:14:53,082 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 14:14:53,089 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:14:53,091 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 14:14:53,093 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 14:14:53,093 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 14:14:53,098 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 14:14:53,126 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 14:14:53,129 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 14:24:22,837 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\run.py', reloading
+2025-04-30 14:24:22,916 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 14:24:23,575 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 14:24:23,576 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 14:24:23,971 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:24:25,170 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 14:24:25,172 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 14:24:25,178 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:24:25,182 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 14:24:25,183 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 14:24:25,184 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 14:24:25,188 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 14:24:25,216 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 14:24:25,220 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 14:26:44,841 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 14:26:44] "GET / HTTP/1.1" 200 -
+2025-04-30 14:26:49,720 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 14:26:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-30 14:32:11,534 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 14:32:11] "GET / HTTP/1.1" 200 -
+2025-04-30 14:46:54,601 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 14:46:54,603 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 14:46:55,050 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:46:55,926 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 14:46:55,928 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 14:46:55,930 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:46:55,952 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 14:46:55,959 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 14:46:55,961 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 14:46:55,963 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 14:46:57,346 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.15.78.99:80
+2025-04-30 14:46:57,346 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 14:46:57,346 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 14:46:57,976 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 14:46:57,976 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 14:46:58,360 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:46:59,198 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 14:46:59,204 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 14:46:59,210 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 14:46:59,213 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 14:46:59,214 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 14:46:59,214 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 14:46:59,219 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 14:46:59,247 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 14:46:59,251 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:03:36,308 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 18:03:36,321 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:03:37,577 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:03:41,783 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:03:41,793 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:03:41,824 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:03:41,929 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:03:41,929 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:03:41,935 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:03:41,945 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:03:43,657 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 18:03:43,657 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 18:03:43,666 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:03:45,024 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 18:03:45,028 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:03:45,958 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:03:47,421 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:03:47,427 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:03:47,445 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:03:47,453 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:03:47,458 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:03:47,458 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:03:47,472 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:03:47,537 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:03:47,542 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:04:45,429 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 18:04:45,435 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:04:46,505 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:04:48,075 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:04:48,082 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:04:48,097 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:04:48,157 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:04:48,161 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:04:48,164 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:04:48,171 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:04:49,629 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 18:04:49,629 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 18:04:49,629 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:04:51,244 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 18:04:51,250 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:04:52,554 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:04:54,537 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:04:54,539 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:04:54,570 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:04:54,581 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:04:54,583 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:04:54,589 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:04:54,602 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:04:54,724 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:04:54,749 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:09:08,815 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 18:09:08,819 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:09:09,670 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:09:11,224 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:09:11,228 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:09:11,239 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:09:11,275 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:09:11,278 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:09:11,279 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:09:11,288 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:09:12,744 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 18:09:12,744 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 18:09:12,744 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:09:14,472 - __main__ - WARNING - LLM service initialization failed
+2025-04-30 18:09:14,476 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:09:15,282 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:09:18,106 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:09:18,118 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:09:18,133 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:09:18,133 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:09:18,142 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:09:18,142 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:09:18,149 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:09:18,190 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:09:18,201 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:09:50,703 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 18:09:50] "GET / HTTP/1.1" 200 -
+2025-04-30 18:09:50,856 - werkzeug - INFO - 127.0.0.1 - - [30/Apr/2025 18:09:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-30 18:10:13,537 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 18:10:13,708 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:10:15,488 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:10:21,494 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:10:22,488 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:10:24,009 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:10:24,018 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:10:24,045 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:10:24,087 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:10:24,087 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:10:24,093 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:10:24,096 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:10:25,681 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 18:10:25,681 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 18:10:25,710 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:10:27,395 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:10:28,447 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:10:32,096 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:10:32,099 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:10:32,113 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:10:32,121 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:10:32,124 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:10:32,124 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:10:32,131 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:10:32,180 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:10:32,192 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:15:28,620 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:15:29,613 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:15:31,727 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:15:31,736 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:15:31,760 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:15:31,838 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:15:31,838 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:15:31,841 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:15:31,843 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:15:33,572 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 18:15:33,574 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 18:15:33,581 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:15:35,165 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:15:36,415 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:15:38,310 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:15:38,321 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:15:38,347 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:15:38,350 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:15:38,355 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:15:38,358 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:15:38,370 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:15:38,417 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:15:38,423 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:37:46,088 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Dickson\\OneDrive\\Desktop\\Chat bot\\app.py', reloading
+2025-04-30 18:37:46,221 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:37:47,970 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:37:48,939 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:37:50,932 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:37:50,940 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:37:50,954 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:37:50,959 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:37:50,961 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:37:50,963 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:37:50,973 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:37:51,051 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:37:51,071 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:38:06,255 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:38:07,239 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:38:08,809 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:38:08,821 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:38:08,836 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:38:08,870 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:38:08,870 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:38:08,875 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:38:08,880 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:38:10,384 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 18:38:10,384 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 18:38:10,402 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:38:12,366 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:38:13,748 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:38:17,279 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:38:17,284 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:38:17,296 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:38:17,299 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:38:17,299 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:38:17,305 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:38:17,312 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:38:17,360 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:38:17,368 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:43:53,961 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:43:55,732 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:43:57,044 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:43:57,046 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:43:57,061 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:43:57,083 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:43:57,083 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:43:57,097 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:43:57,101 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:43:57,234 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 18:43:57,234 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 18:43:57,237 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:43:57,844 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:43:58,216 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:43:59,346 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:43:59,356 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:43:59,364 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:43:59,366 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:43:59,367 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:43:59,368 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:43:59,371 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:43:59,395 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:43:59,401 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 18:54:36,864 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:54:37,297 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:54:49,117 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:54:49,119 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:54:49,126 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:54:49,148 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:54:49,150 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:54:49,150 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:54:49,154 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:54:49,197 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 18:54:49,197 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 18:54:49,200 - werkzeug - INFO -  * Restarting with stat
+2025-04-30 18:54:49,835 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 18:54:50,249 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:54:59,379 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 18:54:59,381 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 18:54:59,387 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 18:54:59,390 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 18:54:59,391 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 18:54:59,392 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 18:54:59,396 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 18:54:59,426 - werkzeug - WARNING -  * Debugger is active!
+2025-04-30 18:54:59,429 - werkzeug - INFO -  * Debugger PIN: 145-983-472
+2025-04-30 19:12:13,192 - __main__ - INFO - Successfully imported ML summarization libraries
+2025-04-30 19:12:13,985 - __main__ - INFO - Downloading NLTK resource: wordnet
+2025-04-30 19:12:15,669 - __main__ - INFO - Downloaded NLTK resource: wordnet
+2025-04-30 19:12:15,680 - __main__ - INFO - NLTK initialized successfully
+2025-04-30 19:12:15,686 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-04-30 19:12:15,712 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-04-30 19:12:15,713 - pdf_processor - WARNING - OCR libraries not available, scanned documents cannot be processed
+2025-04-30 19:12:15,723 - __main__ - INFO - Loading knowledge base from knowledge_base.json
+2025-04-30 19:12:15,729 - __main__ - INFO - Starting Akoo PDF Summarization Chatbot
+2025-04-30 19:12:15,771 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.8.54:80
+2025-04-30 19:12:15,771 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

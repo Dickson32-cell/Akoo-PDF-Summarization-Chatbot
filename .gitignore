@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Uploads and cache
+uploads/
+cache/
+model_cache/
+keys/
+
+# User data
+users.json
+
+# Logs
+*.log
+
+# Flask
+instance/
+.webassets-cache
+
+# Pytorch/ML
+*.pt
+*.pth
+
+# OS specific
+.DS_Store
+Thumbs.db

@@ -1,0 +1,177 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "hello",
+                "hi",
+                "hey",
+                "howdy",
+                "greetings",
+                "good morning",
+                "good afternoon",
+                "good evening",
+                "what's up",
+                "hello there"
+            ],
+            "responses": [
+                "Hello! How can I help you today?",
+                "Hi there! What can I do for you?",
+                "Hey! How can I assist you?",
+                "Greetings! What brings you here today?",
+                "Hello! I'm ready to help with any questions you might have."
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "bye",
+                "goodbye",
+                "see you",
+                "see you later",
+                "later",
+                "exit",
+                "quit",
+                "end",
+                "finish",
+                "that's all"
+            ],
+            "responses": [
+                "Goodbye! Have a great day!",
+                "See you later! Come back anytime.",
+                "Take care! Hope to chat again soon.",
+                "Bye for now! Feel free to return if you have more questions.",
+                "Until next time! Have a wonderful day."
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "thanks",
+                "thank you",
+                "appreciate it",
+                "helpful",
+                "thanks a lot",
+                "thank you so much",
+                "that was helpful",
+                "I appreciate your help"
+            ],
+            "responses": [
+                "You're welcome!",
+                "Happy to help!",
+                "Anytime! Need anything else?",
+                "Glad I could assist!",
+                "It's my pleasure. Let me know if you need anything else!"
+            ]
+        },
+        {
+            "tag": "about",
+            "patterns": [
+                "who are you",
+                "what are you",
+                "tell me about yourself",
+                "your purpose",
+                "your function",
+                "your capabilities",
+                "what do you do",
+                "introduce yourself"
+            ],
+            "responses": [
+                "I'm a Flask chatbot enhanced with NLTK for natural language processing.",
+                "I'm a chatbot built with Python, Flask, and NLTK. I can understand natural language to some extent.",
+                "I'm a digital assistant that uses natural language processing to understand your queries better.",
+                "I'm an AI assistant designed to demonstrate how chatbots work using Flask and natural language processing techniques."
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "help",
+                "assist",
+                "support",
+                "what can you do",
+                "instructions",
+                "guide me",
+                "show commands",
+                "options",
+                "features",
+                "capabilities"
+            ],
+            "responses": [
+                "I can answer basic questions, provide greetings, and demonstrate natural language processing. Try asking me who I am or how I work!",
+                "I can help with simple conversations and demonstrate NLP concepts. Ask me something in natural language!",
+                "I'm here to show how NLP can improve chatbots. Try different ways of asking the same question and see how I respond!",
+                "I can respond to greetings, farewells, and questions about myself. I also understand when you're thanking me or asking for help."
+            ]
+        },
+        {
+            "tag": "nlp",
+            "patterns": [
+                "how do you work",
+                "nlp",
+                "natural language",
+                "processing",
+                "understand",
+                "algorithm",
+                "machine learning",
+                "how do you understand me",
+                "text processing"
+            ],
+            "responses": [
+                "I use Natural Language Processing (NLP) techniques like tokenization, lemmatization, and bag-of-words to understand your input.",
+                "I process your text by breaking it down into tokens, removing stop words, and finding word stems to match patterns more effectively.",
+                "My NLP pipeline includes text normalization, lemmatization, and pattern matching to interpret your queries.",
+                "I analyze your text using NLTK (Natural Language Toolkit) to remove unimportant words and identify the core meaning of your message."
+            ]
+        },
+        {
+            "tag": "weather",
+            "patterns": [
+                "weather",
+                "forecast",
+                "temperature",
+                "is it going to rain",
+                "how's the weather",
+                "weather forecast",
+                "sunny",
+                "rainy",
+                "snowing"
+            ],
+            "responses": [
+                "I'm a simple chatbot and don't have access to real-time weather data. You might want to check a weather app or website for that information.",
+                "I don't have the capability to check weather forecasts. Try checking a dedicated weather service for accurate information.",
+                "Unfortunately, I can't provide weather updates. You could try asking Google, checking a weather app, or looking outside!"
+            ]
+        },
+        {
+            "tag": "jokes",
+            "patterns": [
+                "tell me a joke",
+                "joke",
+                "be funny",
+                "make me laugh",
+                "do you know any jokes",
+                "tell something funny"
+            ],
+            "responses": [
+                "Why don't scientists trust atoms? Because they make up everything!",
+                "What did the AI say to the coffee machine? 'You brew my mind!'",
+                "Why did the chatbot go to therapy? It had too many unresolved queries!",
+                "How many programmers does it take to change a light bulb? None, that's a hardware problem!",
+                "I told my computer I needed a break, and now it won't stop sending me Kit-Kat ads."
+            ]
+        },
+        {
+            "tag": "fallback",
+            "patterns": [],
+            "responses": [
+                "I'm not sure I understand. Could you rephrase that?",
+                "I don't have an answer for that yet.",
+                "I'm still learning and don't know how to respond to that.",
+                "I'm not programmed to answer that question yet.",
+                "That's beyond my current capabilities. Could you try asking something else?",
+                "I didn't quite catch that. Could you try different wording?"
+            ]
+        }
+    ]
+}
