@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+<!--
+    AKOO AI - Advanced PDF Intelligence Platform
+    Created by: Abdul Rashid Dickson
+    © 2025 All Rights Reserved
+-->
+
+{% block title %}AKOO AI - Advanced PDF Summarization Chatbot{% endblock %}
+
+{% block content %}
+<div class="landing-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge glass-panel">
+                <i class="fas fa-sparkles"></i>
+                <span>AI-Powered Document Intelligence</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">Transform Your PDFs</span>
+                <br>
+                <span>Into Actionable Insights</span>
+            </h1>
+            
+            <p class="hero-description">
+                Experience the future of document analysis with AKOO AI. 
+                Upload any PDF and get instant summaries, knowledge graphs, 
+                mind maps, and AI-powered insights.
+            </p>
+            
+            <div class="hero-actions">
+                <a href="/chat" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket"></i>
+                    <span>Start Chatting</span>
+                </a>
+                <button class="btn btn-secondary btn-lg" id="upload-hero-btn">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Upload PDF</span>
+                </button>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">10K+</span>
+                    <span class="stat-label">Documents Processed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">50+</span>
+                    <span class="stat-label">Languages Supported</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">99%</span>
+                    <span class="stat-label">Accuracy Rate</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="floating-card card-1 glass-panel">
+                <i class="fas fa-file-pdf"></i>
+                <span>PDF Analysis</span>
+            </div>
+            <div class="floating-card card-2 glass-panel">
+                <i class="fas fa-brain"></i>
+                <span>AI Summarization</span>
+            </div>
+            <div class="floating-card card-3 glass-panel">
+                <i class="fas fa-project-diagram"></i>
+                <span>Knowledge Graphs</span>
+            </div>
+            <div class="floating-card card-4 glass-panel">
+                <i class="fas fa-microphone"></i>
+                <span>Voice Interaction</span>
+            </div>
+            
+            <div class="hero-3d-visual">
+                <div class="pdf-stack">
+                    <div class="pdf-page page-1"></div>
+                    <div class="pdf-page page-2"></div>
+                    <div class="pdf-page page-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="gradient-text">Powerful Features</span>
+            </h2>
+            <p class="section-description">
+                Everything you need to understand your documents better
+            </p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card glass-panel">
+                <div class="feature-icon gradient-bg">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Smart Summarization</h3>
+                <p>AI-powered summaries that capture key insights from any document length.</p>
+            </div>
+            
+            <div class="feature-card glass-panel">
+                <div class="feature-icon gradient-bg">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>Knowledge Graphs</h3>
+                <p>Visualize connections between concepts with interactive knowledge graphs.</p>
+            </div>
+            
+            <div class="feature-card glass-panel">
+                <div class="feature-icon gradient-bg">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <h3>Mind Maps</h3>
+                <p>Generate hierarchical mind maps to understand document structure.</p>
+            </div>
+            
+            <div class="feature-card glass-panel">
+                <div class="feature-icon gradient-bg">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Multi-Language</h3>
+                <p>Translate and summarize documents in over 50 languages.</p>
+            </div>
+            
+            <div class="feature-card glass-panel">
+                <div class="feature-icon gradient-bg">
+                    <i class="fas fa-microphone-alt"></i>
+                </div>
+                <h3>Voice Interaction</h3>
+                <p>Speak your questions and listen to AI-generated responses.</p>
+            </div>
+            
+            <div class="feature-card glass-panel">
+                <div class="feature-icon gradient-bg">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>Document Comparison</h3>
+                <p>Compare multiple documents side by side for insights.</p>
+            </div>
+            
+            <div class="feature-card glass-panel">
+                <div class="feature-icon gradient-bg">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <h3>Citation Extraction</h3>
+                <p>Automatically extract and format citations and references.</p>
+            </div>
+            
+            <div class="feature-card glass-panel">
+                <div class="feature-icon gradient-bg">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Sentiment Analysis</h3>
+                <p>Understand the tone and sentiment of your documents.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="gradient-text">How It Works</span>
+            </h2>
+            <p class="section-description">
+                Three simple steps to unlock document intelligence
+            </p>
+        </div>
+        
+        <div class="steps-container">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content glass-panel">
+                    <div class="step-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Upload Your PDF</h3>
+                    <p>Drag and drop or click to upload any PDF document up to 64MB.</p>
+                </div>
+            </div>
+            
+            <div class="step-connector">
+                <div class="connector-line"></div>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content glass-panel">
+                    <div class="step-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>AI Processing</h3>
+                    <p>Our advanced AI analyzes your document using multiple ML models.</p>
+                </div>
+            </div>
+            
+            <div class="step-connector">
+                <div class="connector-line"></div>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content glass-panel">
+                    <div class="step-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Get Insights</h3>
+                    <p>Receive summaries, graphs, and interactive visualizations instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content glass-panel">
+            <h2>Ready to Transform Your Documents?</h2>
+            <p>Start using AKOO AI today and experience the future of document intelligence.</p>
+            <a href="/chat" class="btn btn-primary btn-lg">
+                <i class="fas fa-rocket"></i>
+                <span>Get Started Free</span>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- Upload Modal -->
+<div class="modal" id="upload-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glass-panel">
+        <div class="modal-header">
+            <h3>Upload PDF</h3>
+            <button class="modal-close" id="close-upload-modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="upload-zone" id="upload-zone">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h4>Drag & Drop your PDF here</h4>
+                <p>or click to browse files</p>
+                <input type="file" id="file-input" accept=".pdf" hidden>
+            </div>
+            <div class="upload-progress" id="upload-progress" style="display: none;">
+                <div class="progress-ring">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="progress-bg" cx="50" cy="50" r="45"/>
+                        <circle class="progress-bar" cx="50" cy="50" r="45" id="progress-circle"/>
+                    </svg>
+                    <span class="progress-text" id="progress-text">0%</span>
+                </div>
+                <p class="progress-status" id="progress-status">Uploading...</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+{% endblock %}

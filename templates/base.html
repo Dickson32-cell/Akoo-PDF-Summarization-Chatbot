@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+╔══════════════════════════════════════════════════════════════════════════════╗
+║     AKOO AI - Advanced PDF Intelligence Platform                            ║
+║     Created by: Abdul Rashid Dickson                                        ║
+║     © 2025 All Rights Reserved                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en" data-theme="dark" data-creator="Abdul Rashid Dickson">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abdul Rashid Dickson">
+    <meta name="creator" content="Abdul Rashid Dickson">
+    <meta name="description" content="AKOO AI - Advanced PDF Intelligence Platform. Created by Abdul Rashid Dickson.">
+    <meta name="application-name" content="AKOO AI">
+    
+    <title>{% block title %}AKOO AI - Advanced PDF Intelligence{% endblock %}</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="dark-theme">
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Header -->
+    <header class="main-header glass-panel">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>AKOO AI</h1>
+                    <span class="tagline">Advanced PDF Intelligence</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="/" class="nav-link {% if request.endpoint == 'home' %}active{% endif %}">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="/chat" class="nav-link {% if request.endpoint == 'chat_page' %}active{% endif %}">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat</span>
+                </a>
+                <a href="/features" class="nav-link">
+                    <i class="fas fa-magic"></i>
+                    <span>Features</span>
+                </a>
+                <a href="/about" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="icon-btn" id="voice-btn" title="Voice Input">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer with Protected Creator Attribution -->
+    <footer class="main-footer glass-panel" id="creator-attribution" data-protected="true">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-robot"></i>
+                    <span>AKOO AI</span>
+                </div>
+                <p class="footer-tagline">Advanced PDF Intelligence Platform</p>
+            </div>
+            
+            <div class="footer-creator" id="protected-creator-section">
+                <div class="creator-badge">
+                    <i class="fas fa-code"></i>
+                    <span class="creator-label">Created by</span>
+                </div>
+                <h3 class="creator-name" id="creator-name-display">Abdul Rashid Dickson</h3>
+                <p class="copyright">© 2025 All Rights Reserved</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="/about" class="footer-link">About</a>
+                <a href="/privacy" class="footer-link">Privacy</a>
+                <a href="/terms" class="footer-link">Terms</a>
+            </div>
+        </div>
+        
+        <!-- Hidden integrity markers -->
+        <div style="display:none" id="integrity-marker" 
+             data-c="Abdul Rashid Dickson" 
+             data-h="4162647586c205261736869642044696366736f6e"
+             data-b="QWJkdWwgUmFzaGlkIERpY2tzb24=">
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/integrity.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+    
+    <!-- Console signature -->
+    <script>
+        console.log('%c AKOO AI ', 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 5px;');
+        console.log('%c Created by: Abdul Rashid Dickson ', 'color: #667eea; font-size: 14px; font-weight: bold;');
+        console.log('%c © 2025 All Rights Reserved ', 'color: #888; font-size: 12px;');
+    </script>
+</body>
+</html>

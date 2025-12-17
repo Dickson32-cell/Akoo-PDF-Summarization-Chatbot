@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+<!--
+    AKOO AI - Advanced PDF Intelligence Platform
+    Created by: Abdul Rashid Dickson
+    © 2025 All Rights Reserved
+-->
+
+{% block title %}Chat - AKOO AI{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="chat-container">
+    <!-- Sidebar -->
+    <aside class="chat-sidebar glass-panel">
+        <div class="sidebar-header">
+            <h3>Tools & Features</h3>
+        </div>
+
+        <div class="sidebar-content">
+            <!-- Quick Actions -->
+            <div class="sidebar-section">
+                <h4>Quick Actions</h4>
+                <div class="action-buttons">
+                    <button class="action-btn" id="btn-upload-pdf">
+                        <i class="fas fa-file-upload"></i>
+                        <span>Upload PDF</span>
+                    </button>
+                    <button class="action-btn" id="btn-new-chat">
+                        <i class="fas fa-plus"></i>
+                        <span>New Chat</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Analysis Tools -->
+            <div class="sidebar-section">
+                <h4>Analysis Tools</h4>
+                <div class="tool-list">
+                    <button class="tool-btn" data-tool="summarize">
+                        <i class="fas fa-compress-alt"></i>
+                        <span>Summarize</span>
+                    </button>
+                    <button class="tool-btn" data-tool="knowledge-graph">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Knowledge Graph</span>
+                    </button>
+                    <button class="tool-btn" data-tool="mind-map">
+                        <i class="fas fa-sitemap"></i>
+                        <span>Mind Map</span>
+                    </button>
+                    <button class="tool-btn" data-tool="compare">
+                        <i class="fas fa-columns"></i>
+                        <span>Compare Docs</span>
+                    </button>
+                    <button class="tool-btn" data-tool="translate">
+                        <i class="fas fa-language"></i>
+                        <span>Translate</span>
+                    </button>
+                    <button class="tool-btn" data-tool="citations">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Extract Citations</span>
+                    </button>
+                    <button class="tool-btn" data-tool="sentiment">
+                        <i class="fas fa-smile"></i>
+                        <span>Sentiment</span>
+                    </button>
+                    <button class="tool-btn" data-tool="quiz">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Generate Quiz</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Summary Settings -->
+            <div class="sidebar-section">
+                <h4>Summary Settings</h4>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="summary-length">Length</label>
+                        <input type="range" id="summary-length" min="10" max="100" value="30">
+                        <span class="range-value" id="summary-length-value">30 sentences</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary-format">Format</label>
+                        <select id="summary-format">
+                            <option value="paragraph">Paragraph</option>
+                            <option value="bullet">Bullet Points</option>
+                            <option value="numbered">Numbered List</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary-type">Type</label>
+                        <select id="summary-type">
+                            <option value="academic">Academic</option>
+                            <option value="structured">Structured</option>
+                            <option value="basic">Basic</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Document -->
+            <div class="sidebar-section" id="current-doc-section" style="display: none;">
+                <h4>Current Document</h4>
+                <div class="current-doc glass-panel">
+                    <i class="fas fa-file-pdf"></i>
+                    <div class="doc-info">
+                        <span class="doc-name" id="current-doc-name">document.pdf</span>
+                        <span class="doc-pages" id="current-doc-pages">0 pages</span>
+                    </div>
+                    <button class="remove-doc-btn" id="remove-doc-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="creator-info">
+                <span>Created by</span>
+                <strong>Abdul Rashid Dickson</strong>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-main">
+        <!-- Chat Header -->
+        <div class="chat-header glass-panel">
+            <div class="chat-title">
+                <div class="avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="title-info">
+                    <h2>AKOO AI</h2>
+                    <span class="status online">
+                        <i class="fas fa-circle"></i> Online
+                    </span>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button class="icon-btn" id="btn-voice-mode" title="Voice Mode">
+                    <i class="fas fa-headset"></i>
+                </button>
+                <button class="icon-btn" id="btn-fullscreen" title="Fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="icon-btn" id="btn-export" title="Export Chat">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="icon-btn" id="btn-settings" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages Container -->
+        <div class="messages-container" id="messages-container">
+            <!-- Welcome Message -->
+            <div class="message bot-message welcome-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content glass-panel">
+                    <div class="message-header">
+                        <span class="message-sender">AKOO AI</span>
+                        <span class="message-time">Just now</span>
+                    </div>
+                    <div class="message-body">
+                        <h3>Welcome to AKOO AI! 🚀</h3>
+                        <p>I'm your advanced PDF intelligence assistant. Here's what I can do:</p>
+                        <ul class="capabilities-list">
+                            <li><i class="fas fa-check-circle"></i> Summarize PDFs with academic precision</li>
+                            <li><i class="fas fa-check-circle"></i> Generate interactive knowledge graphs</li>
+                            <li><i class="fas fa-check-circle"></i> Create mind maps from documents</li>
+                            <li><i class="fas fa-check-circle"></i> Compare multiple documents</li>
+                            <li><i class="fas fa-check-circle"></i> Translate content to 50+ languages</li>
+                            <li><i class="fas fa-check-circle"></i> Extract citations and references</li>
+                            <li><i class="fas fa-check-circle"></i> Analyze sentiment and tone</li>
+                            <li><i class="fas fa-check-circle"></i> Generate quizzes from content</li>
+                        </ul>
+                        <p>Upload a PDF or start asking questions!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typing-indicator" style="display: none;">
+            <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="typing-dots glass-panel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area glass-panel">
+            <div class="input-tools">
+                <button class="input-tool-btn" id="btn-attach" title="Attach File">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <button class="input-tool-btn" id="btn-voice-input" title="Voice Input">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="input-tool-btn" id="btn-emoji" title="Insert Emoji">
+                    <i class="fas fa-smile"></i>
+                </button>
+            </div>
+
+            <div class="input-wrapper">
+                <textarea id="message-input" placeholder="Ask a question or paste text to summarize..."
+                    rows="1"></textarea>
+            </div>
+
+            <button class="send-btn" id="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- Visualization Panel (Hidden by default) -->
+    <aside class="viz-panel glass-panel" id="viz-panel" style="display: none;">
+        <div class="viz-header">
+            <h3 id="viz-title">Visualization</h3>
+            <div class="viz-actions">
+                <button class="icon-btn" id="viz-fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="icon-btn" id="viz-download">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="icon-btn" id="viz-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="viz-content" id="viz-content">
+            <!-- Visualization will be rendered here -->
+        </div>
+    </aside>
+</div>
+
+<!-- Voice Recording Modal -->
+<div class="modal" id="voice-modal" style="display: none;">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content glass-panel voice-modal-content">
+        <div class="voice-animation">
+            <div class="voice-ring ring-1"></div>
+            <div class="voice-ring ring-2"></div>
+            <div class="voice-ring ring-3"></div>
+            <div class="voice-icon">
+                <i class="fas fa-microphone"></i>
+            </div>
+        </div>
+        <p class="voice-status" id="voice-status">Listening...</p>
+        <div class="voice-waveform" id="voice-waveform"></div>
+        <button class="btn btn-primary" id="stop-recording">
+            <i class="fas fa-stop"></i>
+            <span>Stop Recording</span>
+        </button>
+    </div>
+</div>
+
+<!-- Hidden File Input -->
+<input type="file" id="file-input" accept=".pdf" style="display: none;">
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+<script src="{{ url_for('static', filename='js/visualizations.js') }}"></script>
+<script src="{{ url_for('static', filename='js/voice.js') }}"></script>
+{% endblock %}
