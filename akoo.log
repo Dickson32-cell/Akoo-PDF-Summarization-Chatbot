@@ -3065,3 +3065,15 @@
  * Running on http://127.0.0.1:80
  * Running on http://192.168.8.54:80
 2025-04-30 19:12:15,771 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-17 14:24:01,061 - app - INFO - Created directory: uploads
+2025-12-17 14:24:01,064 - app - INFO - Created directory: cache
+2025-12-17 14:24:01,069 - app - INFO - Successfully imported ML summarization libraries
+2025-12-17 14:24:01,097 - app - INFO - Downloading NLTK resource: wordnet
+2025-12-17 14:24:14,631 - app - INFO - Downloaded NLTK resource: wordnet
+2025-12-17 14:24:14,652 - app - INFO - NLTK initialized successfully
+2025-12-17 14:24:14,683 - summarization - INFO - Downloading NLTK resource: wordnet
+2025-12-17 14:24:14,713 - pdf_processor - WARNING - PyMuPDF not available, some advanced extraction features will be limited
+2025-12-17 14:24:15,249 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-12-17 14:24:15,249 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-12-17 14:24:15,737 - pdf_processor - INFO - OCR libraries available for scanned document processing
+2025-12-17 14:24:15,753 - app - INFO - Loading knowledge base from knowledge_base.json

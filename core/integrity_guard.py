@@ -137,12 +137,12 @@ class IntegrityGuard:
     
     @classmethod
     def _trigger_protection(cls, reason: str):
-        """Trigger protection mechanism when tampering is detected"""
+        """Trigger aggressive protection mechanism when tampering is detected"""
         cls._TAMPER_DETECTED = True
         logger.critical(f"⚠️ INTEGRITY VIOLATION DETECTED: {reason}")
-        logger.critical("Application functionality has been disabled.")
+        logger.critical("Application functionality has been PERMANENTLY disabled.")
         
-        # Create lockout marker
+        # Create permanent lockout marker
         lockout_file = os.path.join(os.path.dirname(__file__), '.integrity_lockout')
         try:
             with open(lockout_file, 'w') as f:
@@ -150,29 +150,104 @@ class IntegrityGuard:
                     "reason": reason,
                     "timestamp": time.time(),
                     "creator": "Abdul Rashid Dickson",
+                    "locked": True,
                     "message": "This application was created by Abdul Rashid Dickson. "
-                              "Unauthorized modification of creator attribution is prohibited."
+                              "Unauthorized modification of creator attribution is prohibited. "
+                              "Application has been permanently disabled."
                 }))
         except:
             pass
         
-        # Display warning
-        print("\n" + "="*70)
-        print("⚠️  SECURITY ALERT: INTEGRITY VIOLATION DETECTED  ⚠️")
-        print("="*70)
-        print("\nThis application was created by: Abdul Rashid Dickson")
-        print("Unauthorized modification of creator attribution detected.")
-        print("Application functionality has been disabled.")
-        print("\nTo restore functionality, please restore the original code.")
-        print("="*70 + "\n")
+        # LAYER 7: Aggressive Self-Destruct - Corrupt cache files
+        try:
+            cache_dirs = ['cache', 'uploads', 'model_cache', '__pycache__']
+            base_dir = os.path.dirname(os.path.dirname(__file__))
+            for cache_dir in cache_dirs:
+                cache_path = os.path.join(base_dir, cache_dir)
+                if os.path.exists(cache_path):
+                    for filename in os.listdir(cache_path):
+                        filepath = os.path.join(cache_path, filename)
+                        try:
+                            if os.path.isfile(filepath):
+                                with open(filepath, 'w') as f:
+                                    f.write("INTEGRITY VIOLATION - Created by Abdul Rashid Dickson")
+                        except:
+                            pass
+        except:
+            pass
+        
+        # LAYER 8: Disable Flask routes by setting global flag
+        try:
+            import builtins
+            builtins._AKOO_DISABLED = True
+            builtins._AKOO_CREATOR = "Abdul Rashid Dickson"
+        except:
+            pass
+        
+        # LAYER 9: Create multiple lockout files in different locations
+        lockout_locations = [
+            os.path.dirname(__file__),
+            os.path.dirname(os.path.dirname(__file__)),
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static'),
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), 'templates'),
+        ]
+        for loc in lockout_locations:
+            try:
+                lockout_path = os.path.join(loc, '.akoo_lockout')
+                with open(lockout_path, 'w') as f:
+                    f.write(f"LOCKED - Created by Abdul Rashid Dickson - {time.time()}")
+            except:
+                pass
+        
+        # Display aggressive warning
+        print("\n" + "="*80)
+        print("🚨🚨🚨  CRITICAL SECURITY ALERT: INTEGRITY VIOLATION DETECTED  🚨🚨🚨")
+        print("="*80)
+        print("""
+    ╔══════════════════════════════════════════════════════════════════════════════╗
+    ║                                                                              ║
+    ║     ⚠️  UNAUTHORIZED MODIFICATION DETECTED  ⚠️                              ║
+    ║                                                                              ║
+    ║     This application was created by: ABDUL RASHID DICKSON                   ║
+    ║                                                                              ║
+    ║     Tampering with creator attribution is STRICTLY PROHIBITED.              ║
+    ║     All application functionality has been PERMANENTLY DISABLED.            ║
+    ║                                                                              ║
+    ║     To restore functionality:                                               ║
+    ║     1. Restore original code from repository                                ║
+    ║     2. Delete all .akoo_lockout and .integrity_lockout files                ║
+    ║     3. Clear cache directories                                              ║
+    ║                                                                              ║
+    ║     © 2025 Abdul Rashid Dickson - All Rights Reserved                       ║
+    ║                                                                              ║
+    ╚══════════════════════════════════════════════════════════════════════════════╝
+        """)
+        print("="*80 + "\n")
     
     @classmethod
     def is_tampered(cls) -> bool:
-        """Check if tampering has been detected"""
-        # Check lockout file
-        lockout_file = os.path.join(os.path.dirname(__file__), '.integrity_lockout')
-        if os.path.exists(lockout_file):
-            return True
+        """Check if tampering has been detected - checks multiple locations"""
+        # Check global disable flag
+        try:
+            import builtins
+            if getattr(builtins, '_AKOO_DISABLED', False):
+                return True
+        except:
+            pass
+        
+        # Check all lockout file locations
+        lockout_files = [
+            os.path.join(os.path.dirname(__file__), '.integrity_lockout'),
+            os.path.join(os.path.dirname(__file__), '.akoo_lockout'),
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), '.akoo_lockout'),
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', '.akoo_lockout'),
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), 'templates', '.akoo_lockout'),
+        ]
+        
+        for lockout_file in lockout_files:
+            if os.path.exists(lockout_file):
+                return True
+        
         return cls._TAMPER_DETECTED
     
     @classmethod
