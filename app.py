@@ -597,8 +597,21 @@ def process_pdf_async(file_path, params, callback, job_id=None):
 
 # Routes
 @app.route("/")
-
 def home():
+    """Landing page - Created by Abdul Rashid Dickson"""
+    response = make_response(render_template("index.html"))
+    
+    # Set session ID cookie if not already set
+    if not request.cookies.get('session_id'):
+        session_id = str(uuid.uuid4())
+        response.set_cookie('session_id', session_id, max_age=86400*30)  # 30 days
+        CONVERSATION_CONTEXTS[session_id] = deque(maxlen=5)
+    
+    return response
+
+@app.route("/chat")
+def chat_page():
+    """Chat interface page - Created by Abdul Rashid Dickson"""
     response = make_response(render_template("chat.html"))
     
     # Set session ID cookie if not already set
@@ -608,6 +621,17 @@ def home():
         CONVERSATION_CONTEXTS[session_id] = deque(maxlen=5)
     
     return response
+
+@app.route("/features")
+def features_page():
+    """Features page - Created by Abdul Rashid Dickson"""
+    return render_template("index.html")  # Features section is on index page
+
+@app.route("/about")
+def about_page():
+    """About page - Created by Abdul Rashid Dickson"""
+    return render_template("index.html")  # About is on index page for now
+
 
 @app.route("/get")
 def get_bot_response():
@@ -875,6 +899,228 @@ def collect_feedback():
     except Exception as e:
         logger.error(f"Error saving feedback: {e}", exc_info=True)  # Log stack trace
         return jsonify({"error": "Error processing feedback"}), 500
+
+
+# ============================================================================
+# ANALYSIS TOOLS API - Created by Abdul Rashid Dickson
+# ============================================================================
+
+# Store extracted text for tools
+DOCUMENT_CACHE = {}
+
+@app.route("/api/knowledge-graph", methods=["POST"])
+def api_knowledge_graph():
+    """Generate knowledge graph from document - Created by Abdul Rashid Dickson"""
+    try:
+        from features.knowledge_graph import KnowledgeGraphGenerator
+        
+        data = request.json
+        document = data.get('document')
+        text = data.get('text', '')
+        
+        # Get text from cache if document specified
+        if document and document in DOCUMENT_CACHE:
+            text = DOCUMENT_CACHE[document]
+        
+        if not text:
+            return jsonify({"error": "No text available. Please upload a document first."}), 400
+        
+        generator = KnowledgeGraphGenerator()
+        graph = generator.generate_graph(text, document or "Document")
+        stats = generator.generate_summary_stats(graph)
+        
+        return jsonify({
+            "graph": graph,
+            "stats": stats,
+            "creator": "Abdul Rashid Dickson"
+        })
+        
+    except Exception as e:
+        logger.error(f"Knowledge graph error: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/mind-map", methods=["POST"])
+def api_mind_map():
+    """Generate mind map from document - Created by Abdul Rashid Dickson"""
+    try:
+        from features.mind_mapper import MindMapGenerator
+        
+        data = request.json
+        document = data.get('document')
+        text = data.get('text', '')
+        
+        # Get text from cache if document specified
+        if document and document in DOCUMENT_CACHE:
+            text = DOCUMENT_CACHE[document]
+        
+        if not text:
+            return jsonify({"error": "No text available. Please upload a document first."}), 400
+        
+        generator = MindMapGenerator()
+        result = generator.generate_mindmap(text, document or "Document")
+        markdown = generator.to_markdown(result['mindmap'])
+        
+        return jsonify({
+            "mindmap": result['mindmap'],
+            "metadata": result['metadata'],
+            "markdown": markdown,
+            "creator": "Abdul Rashid Dickson"
+        })
+        
+    except Exception as e:
+        logger.error(f"Mind map error: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/quiz", methods=["POST"])
+def api_generate_quiz():
+    """Generate quiz from document - Created by Abdul Rashid Dickson"""
+    try:
+        data = request.json
+        text = data.get('text', '')
+        
+        if not text:
+            return jsonify({"error": "No text provided"}), 400
+        
+        # Simple quiz generation from key sentences
+        sentences = robust_sentence_tokenize(text)[:20]
+        questions = []
+        
+        for i, sentence in enumerate(sentences[:5], 1):
+            # Create fill-in-blank style questions
+            words = sentence.split()
+            if len(words) > 5:
+                blank_idx = len(words) // 2
+                answer = words[blank_idx]
+                words[blank_idx] = "______"
+                
+                questions.append({
+                    "id": i,
+                    "question": f"Fill in the blank: {' '.join(words)}",
+                    "answer": answer,
+                    "type": "fill-blank"
+                })
+        
+        return jsonify({
+            "quiz": questions,
+            "total_questions": len(questions),
+            "creator": "Abdul Rashid Dickson"
+        })
+        
+    except Exception as e:
+        logger.error(f"Quiz generation error: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/sentiment", methods=["POST"])
+def api_sentiment():
+    """Analyze sentiment of text - Created by Abdul Rashid Dickson"""
+    try:
+        data = request.json
+        text = data.get('text', '')
+        
+        if not text:
+            return jsonify({"error": "No text provided"}), 400
+        
+        # Simple sentiment analysis using word patterns
+        positive_words = ['good', 'great', 'excellent', 'positive', 'success', 'happy', 'benefit', 'improve', 'best', 'advantage']
+        negative_words = ['bad', 'poor', 'negative', 'fail', 'problem', 'issue', 'worst', 'disadvantage', 'difficult', 'wrong']
+        
+        text_lower = text.lower()
+        pos_count = sum(1 for word in positive_words if word in text_lower)
+        neg_count = sum(1 for word in negative_words if word in text_lower)
+        
+        total = pos_count + neg_count if pos_count + neg_count > 0 else 1
+        positivity = pos_count / total
+        
+        if positivity > 0.6:
+            sentiment = "positive"
+            description = "The text has an overall positive tone."
+        elif positivity < 0.4:
+            sentiment = "negative"
+            description = "The text has an overall negative tone."
+        else:
+            sentiment = "neutral"
+            description = "The text has a balanced, neutral tone."
+        
+        return jsonify({
+            "sentiment": sentiment,
+            "positivity_score": round(positivity * 100, 2),
+            "description": description,
+            "positive_indicators": pos_count,
+            "negative_indicators": neg_count,
+            "creator": "Abdul Rashid Dickson"
+        })
+        
+    except Exception as e:
+        logger.error(f"Sentiment analysis error: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/citations", methods=["POST"])
+def api_extract_citations():
+    """Extract citations from text - Created by Abdul Rashid Dickson"""
+    try:
+        data = request.json
+        text = data.get('text', '')
+        
+        if not text:
+            return jsonify({"error": "No text provided"}), 400
+        
+        # Citation patterns
+        citations = []
+        
+        # APA style: (Author, Year) or Author (Year)
+        apa_pattern = r'\(([A-Z][a-z]+(?:\s+(?:et\s+al\.?|&\s+[A-Z][a-z]+)),?\s*\d{4}[a-z]?)\)'
+        for match in re.findall(apa_pattern, text):
+            citations.append({"type": "APA", "citation": match})
+        
+        # IEEE style: [1], [2], etc.
+        ieee_pattern = r'\[(\d+)\]'
+        for match in re.findall(ieee_pattern, text):
+            citations.append({"type": "IEEE", "citation": f"[{match}]"})
+        
+        # Year references
+        year_pattern = r'\b(19|20)\d{2}\b'
+        years = list(set(re.findall(year_pattern, text)))
+        
+        return jsonify({
+            "citations": citations[:50],  # Limit to 50
+            "total_citations": len(citations),
+            "years_referenced": sorted([y + "00s" for y in years]),
+            "creator": "Abdul Rashid Dickson"
+        })
+        
+    except Exception as e:
+        logger.error(f"Citation extraction error: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/translate", methods=["POST"])
+def api_translate():
+    """Translate text (placeholder) - Created by Abdul Rashid Dickson"""
+    try:
+        data = request.json
+        text = data.get('text', '')
+        target_lang = data.get('target_language', 'es')
+        
+        if not text:
+            return jsonify({"error": "No text provided"}), 400
+        
+        # Note: This is a placeholder - real translation would require an API
+        return jsonify({
+            "original": text[:500],
+            "translated": f"[Translation to {target_lang} requires external API integration]",
+            "target_language": target_lang,
+            "note": "Full translation feature coming soon. Contact Abdul Rashid Dickson for API integration.",
+            "creator": "Abdul Rashid Dickson"
+        })
+        
+    except Exception as e:
+        logger.error(f"Translation error: {e}")
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     logger.info("Starting Akoo PDF Summarization Chatbot")

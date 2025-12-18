@@ -403,36 +403,42 @@
         btn.classList.add('active');
         ChatState.currentTool = tool;
 
+        // Check if we have document text
+        const needsDocument = ['knowledge-graph', 'mind-map', 'citations', 'quiz', 'sentiment'];
+        if (needsDocument.includes(tool) && !ChatState.documentText && !ChatState.currentDocument) {
+            window.showNotification?.('Please upload a document first', 'warning');
+            return;
+        }
+
         // Handle tool-specific actions
         switch (tool) {
-            case 'knowledge-graph':
+            case 'summarize':
                 if (ChatState.currentDocument) {
-                    requestKnowledgeGraph();
+                    addBotMessage('📄 Ready to summarize! Your document is already uploaded. Type a question or paste text.', 'text');
                 } else {
-                    window.showNotification?.('Please upload a document first', 'warning');
+                    addBotMessage('📄 Click "Upload PDF" to upload a document for summarization.', 'text');
                 }
+                break;
+            case 'knowledge-graph':
+                requestKnowledgeGraph();
                 break;
             case 'mind-map':
-                if (ChatState.currentDocument) {
-                    requestMindMap();
-                } else {
-                    window.showNotification?.('Please upload a document first', 'warning');
-                }
+                requestMindMap();
                 break;
             case 'compare':
-                window.showNotification?.('Document comparison coming soon!', 'info');
+                addBotMessage('📊 Document comparison requires two PDFs. Upload your first document, then use this tool again to compare.', 'text');
                 break;
             case 'translate':
-                window.showNotification?.('Translation coming soon!', 'info');
+                requestTranslation();
                 break;
             case 'citations':
-                window.showNotification?.('Citation extraction coming soon!', 'info');
+                requestCitations();
                 break;
             case 'sentiment':
-                window.showNotification?.('Sentiment analysis coming soon!', 'info');
+                requestSentiment();
                 break;
             case 'quiz':
-                window.showNotification?.('Quiz generation coming soon!', 'info');
+                requestQuiz();
                 break;
             default:
                 break;
@@ -487,6 +493,117 @@
             });
     }
 
+    function requestCitations() {
+        showTypingIndicator();
+        addBotMessage('🔄 Extracting citations...', 'text');
+
+        fetch('/api/citations', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: ChatState.documentText || 'Sample text for analysis' })
+        })
+            .then(response => response.json())
+            .then(data => {
+                hideTypingIndicator();
+                if (data.citations) {
+                    let message = `📚 **Citation Analysis**\n\n`;
+                    message += `**Total Citations Found:** ${data.total_citations || 0}\n\n`;
+
+                    if (data.citations.length > 0) {
+                        message += `**Citations:**\n`;
+                        data.citations.slice(0, 10).forEach((c, i) => {
+                            message += `${i + 1}. [${c.type}] ${c.citation}\n`;
+                        });
+                    } else {
+                        message += `No formal citations detected. The document may use informal references.`;
+                    }
+
+                    message += `\n\n*Analysis by AKOO AI - Created by Abdul Rashid Dickson*`;
+                    addBotMessage(message, 'text');
+                } else {
+                    addBotMessage('❌ Could not extract citations', 'error');
+                }
+            })
+            .catch(() => {
+                hideTypingIndicator();
+                addBotMessage('❌ Citation extraction failed', 'error');
+            });
+    }
+
+    function requestSentiment() {
+        showTypingIndicator();
+        addBotMessage('🔄 Analyzing sentiment...', 'text');
+
+        fetch('/api/sentiment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: ChatState.documentText || 'Sample text for analysis' })
+        })
+            .then(response => response.json())
+            .then(data => {
+                hideTypingIndicator();
+                if (data.sentiment) {
+                    const emoji = data.sentiment === 'positive' ? '😊' : data.sentiment === 'negative' ? '😔' : '😐';
+                    let message = `${emoji} **Sentiment Analysis**\n\n`;
+                    message += `**Overall Sentiment:** ${data.sentiment.charAt(0).toUpperCase() + data.sentiment.slice(1)}\n`;
+                    message += `**Positivity Score:** ${data.positivity_score}%\n\n`;
+                    message += `${data.description}\n\n`;
+                    message += `*Analysis by AKOO AI - Created by Abdul Rashid Dickson*`;
+                    addBotMessage(message, 'text');
+
+                    // Also show in viz panel
+                    if (window.AKOO_VIZ) {
+                        showVisualization('Sentiment Analysis', data, 'sentiment');
+                    }
+                } else {
+                    addBotMessage('❌ Could not analyze sentiment', 'error');
+                }
+            })
+            .catch(() => {
+                hideTypingIndicator();
+                addBotMessage('❌ Sentiment analysis failed', 'error');
+            });
+    }
+
+    function requestQuiz() {
+        showTypingIndicator();
+        addBotMessage('🔄 Generating quiz from document...', 'text');
+
+        fetch('/api/quiz', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: ChatState.documentText || 'Sample text for quiz generation' })
+        })
+            .then(response => response.json())
+            .then(data => {
+                hideTypingIndicator();
+                if (data.quiz && data.quiz.length > 0) {
+                    let message = `📝 **Quiz Generated!** (${data.total_questions} questions)\n\n`;
+                    data.quiz.forEach((q, i) => {
+                        message += `**Q${i + 1}:** ${q.question}\n`;
+                        message += `*(Answer: ||${q.answer}||)*\n\n`;
+                    });
+                    message += `*Quiz by AKOO AI - Created by Abdul Rashid Dickson*`;
+                    addBotMessage(message, 'text');
+
+                    // Also show interactive quiz
+                    if (window.AKOO_VIZ) {
+                        showVisualization('Interactive Quiz', data, 'quiz');
+                    }
+                } else {
+                    addBotMessage('❌ Could not generate quiz. The document may be too short.', 'error');
+                }
+            })
+            .catch(() => {
+                hideTypingIndicator();
+                addBotMessage('❌ Quiz generation failed', 'error');
+            });
+    }
+
+    function requestTranslation() {
+        addBotMessage('🌐 **Translation Feature**\n\nTo translate your document, please specify the target language.\n\nExample: "Translate to Spanish" or "Translate to French"\n\n*Note: Full translation requires API integration. Contact Abdul Rashid Dickson for setup.*', 'text');
+    }
+
     // ========================================================================
     // Visualization
     // ========================================================================
@@ -510,6 +627,12 @@
                     break;
                 case 'mindmap':
                     window.AKOO_VIZ.renderMindMap(contentEl, data);
+                    break;
+                case 'sentiment':
+                    window.AKOO_VIZ.renderSentiment(contentEl, data);
+                    break;
+                case 'quiz':
+                    window.AKOO_VIZ.renderQuiz(contentEl, data);
                     break;
             }
         } else {
