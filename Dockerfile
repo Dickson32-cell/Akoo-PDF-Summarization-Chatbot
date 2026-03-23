@@ -11,9 +11,8 @@ ENV PORT=5000
 # Create app directory
 WORKDIR /app
 
-# Install system dependencies for PDF processing
+# Install system dependencies (no build-essential needed)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
     curl \
     libffi-dev \
     && rm -rf /var/lib/apt/lists/*
