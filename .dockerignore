@@ -1,0 +1,54 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# NLTK cache
+nltk_data/
+
+# Model cache
+model_cache/
+
+# Uploads and cache (should be volumes)
+uploads/
+cache/
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+test/
+tests/
+*.test.*

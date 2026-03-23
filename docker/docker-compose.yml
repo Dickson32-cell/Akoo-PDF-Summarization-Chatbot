@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  akoo:
+    build:
+      context: ..
+      dockerfile: Akoo-PDF-Summarization-Chatbot/Dockerfile
+    image: akoo-chatbot:latest
+    container_name: akoo-chatbot
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY:-akoo-secret-key-change-in-production}
+      - LOG_LEVEL=INFO
+      - DEBUG=False
+      - MAX_CONTENT_LENGTH=16777216
+    volumes:
+      - akoo-uploads:/app/uploads
+      - akoo-cache:/app/cache
+      - akoo-feedback:/app/feedback
+      - akoo-logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  akoo-uploads:
+  akoo-cache:
+  akoo-feedback:
+  akoo-logs:
